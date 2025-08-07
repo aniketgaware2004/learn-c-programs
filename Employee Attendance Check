@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main(){
+    float totalDays;
+    float presentDays;
+    scanf("%f %f",&totalDays,&presentDays);
+    int attendance= (presentDays/ totalDays)*100;
+    attendance>=75 ? printf("Eligible for bonus") : printf("Not eligible for bonus");
+ return 0;
+}
