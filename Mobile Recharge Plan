@@ -1,0 +1,8 @@
+ #include<stdio.h>
+int main(){
+    int usage;
+    scanf("%d",&usage);
+
+    usage<2? printf("Plan A - RS. 199 ") : usage>=2 && usage<=10? printf(" Plan B - RS. 399") : usage>=10 ? printf(" Plan C - RS. 599") :"";
+    return 0;
+}
