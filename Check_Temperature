@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main(){
+    int temp;
+    scanf("%d",&temp);
+
+    temp<20? printf("Cold"): temp>=20 && temp<=30? printf("Normal"): printf("Hot");
+    return 0;
+}
