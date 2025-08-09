@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+    int a = 10, b = 200, c = 134;
+    int max = a;
+
+    (b > max) && (max = b);
+    (c > max) && (max = c);
+
+    printf("MAX = %d\n", max);
+    return 0;
+}
