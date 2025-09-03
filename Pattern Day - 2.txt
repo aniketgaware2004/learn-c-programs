@@ -1,0 +1,279 @@
+Ques - 1
+=========================
+  1  2  3  4  5
+ 10  9  8  7  6
+ 11 12 13 14 15
+ 20 19 18 17 16
+ 21 22 23 24 25
+
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int n=5,k=1;
+    for(int i = 1;i<=n;i++) {
+        for(int j = 1;j<=n;j++) {
+            if(i%2!=0) printf("%3d",k++);
+            else printf("%3d",--k);
+        }
+        k+=n;
+       printf("\n"); 
+    }
+
+    return 0;
+}
+
+--------------------------------------------------------------------------
+Ques - 2
+
+  1  6 11 16
+  2  7 12 17
+  3  8 13 18
+  4  9 14 19
+  5 10 15 20
+=========================
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int n=5;
+    for(int i = 1;i<=n;i++) { //i = 1
+        int k = i;
+        for(int j = 1;j<=n-1;j++) {
+            printf("%3d",k);
+            k+=n;
+        }
+       printf("\n"); 
+    }
+
+    return 0;
+}
+============================================
+Ques - 3
+
+  A  B  C  D
+  E  F  G  H
+  I  J  K  L
+  M  N  O  P
+  Q  R  S  T
+=========================
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int n=5;
+    char ch = 'A';
+    for(int i = 1;i<=n;i++) { //i = 1
+       
+        for(int j = 1;j<=n-1;j++) {
+            printf("%3c",ch++);
+         
+        }
+       printf("\n"); 
+    }
+
+    return 0;
+}
+===============================================
+Ques - 4
+
+  A  B  C  D  E
+  B  C  D  E  F
+  C  D  E  F  G
+  D  E  F  G  H
+  E  F  G  H  I
+=========================
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int n=5;
+    for(int i = 1;i<=n;i++) { //i = 3
+    char ch = 'A'+i-1; 
+       
+        for(int j = 1;j<=n;j++) {
+            printf("%3c",ch++); //A B C D E
+                                //B C D E F
+        }
+       printf("\n"); 
+    }
+
+    return 0;
+}
+=================================================
+Ques - 5
+
+  E  J  O  T  Y
+  D  I  N  S  X
+  C  H  M  R  W
+  B  G  L  Q  V
+  A  F  K  P  U
+=========================
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int n=5;
+    for(int i = 1;i<=n;i++) { //i = 3
+    char ch = 'A'+n-i; 
+       
+        for(int j = 1;j<=n;j++) {
+            printf("%3c",ch);
+            ch+=n;
+                                
+        }
+      printf("\n"); 
+    }
+
+   
+    return 0;
+}
+========================================================
+Ques - 6
+
+  *            
+  *  *         
+  *  *  *      
+  *  *  *  *   
+  *  *  *  *  *
+=========================
+#include<stdio.h>
+int main() {
+    int n=5;
+    for(int i = 1;i<=n;i++) { 
+        for(int j = 1;j<=n;j++) {
+            if(j<=i) {
+                printf("%3c",'*');
+            } else {
+                printf("%3c",' ');
+            }         
+        }
+      printf("\n"); 
+    }
+return 0;
+}
+==========================================================
+Ques - 7
+
+  1         
+  2  3      
+  4  5  6   
+  7  8  9 10
+
+
+=========================
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int n=4,k=1;
+    for(int i = 1;i<=n;i++) { 
+        for(int j = 1;j<=n;j++) {
+            if(j<=i) {
+                printf("%3d",k++);
+            } else {
+                printf("%3c",' ');
+            }         
+        }
+      printf("\n"); 
+    }
+
+   
+    return 0;
+}
+=========================================================
+Ques - 8
+
+  2            
+  2  4         
+  2  4  6      
+  2  4  6  8   
+  2  4  6  8 10
+=========================
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int n=5;
+    for(int i = 1;i<=n;i++) { 
+        int k = 2;
+        for(int j = 1;j<=n;j++) { //1 
+            if(j<=i) {
+                printf("%3d",k*j);
+               
+            } else {
+                printf("%3c",' ');
+            }         
+        }
+      printf("\n"); 
+    }
+
+   
+    return 0;
+}
+=================================================
+
+Ques - 9
+
+  1               
+  1  1            
+  1  2  1         
+  1  2  3  1      
+  1  2  3  4  1   
+  1  1  1  1  1  1
+=========================
+Solution - 1
+-------------------
+#include <stdio.h>
+
+int main() {
+    int n=6;
+    for(int i = 1;i<=n;i++) { 
+        
+        for(int j = 1;j<=n;j++) { //1 
+            if(j<=i) {
+                if(j==1 || i == n || i==j) {
+                    printf("%3d",1);
+                }else {
+                    printf("%3d",j);
+                }
+               
+            } else {
+                printf("%3c",' ');
+            }         
+        }
+      printf("\n"); 
+    }
+
+   
+    return 0;
+}
+
+Solution - 2
+-------------------------
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int n=6;
+    for(int i = 1;i<=n;i++) { 
+        
+        for(int j = 1;j<=i;j++) { //1 
+           
+                if(j==1 || i == n || i==j) {
+                    printf("%3d",1);
+                }else {
+                    printf("%3d",j);
+                }
+               
+            }         
+        
+      printf("\n"); 
+    }
+
+   
+    return 0;
+}
+
+
