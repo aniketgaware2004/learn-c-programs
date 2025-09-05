@@ -1,0 +1,288 @@
+
+ques1
+0	0	0	0	1	
+0	0	0	1	1	
+0	0	1	1	1	
+0	1	1	1	1	
+1	1	1	1	1
+
+#include <stdio.h>
+int main() {
+    // Write C code here
+    int n;
+    printf("Enter a row");
+    scanf("%d",&n);
+    
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n; j++){
+            if(j<n-i+1){
+                printf("0\t");
+            }
+            else{
+                printf("1\t");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+ques2
+#	#	#	#	#	
+#	 	 	 	#	
+#	 	 	 	#	
+#	 	 	 	#	
+#	#	#	#	#
+
+
+#include <stdio.h>
+int main() {
+    // Write C code here
+    int n;
+    printf("Enter a row and column");
+    scanf("%d",&n);
+    
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n; j++){
+            if( i==1|| j==1|| j==n || i==n){
+                printf("#\t");
+            }
+            else{
+                printf(" \t");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+ques3
+1	 	 	 	 	
+1	2	 	 	 	
+1	 	3	 	 	
+1	 	 	4	 	
+1	2	3	4	5
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int row, column;
+    printf("Enter a row and column");
+    scanf("%d %d",&row, &column);
+    
+    for(int i=1; i<=row; i++){
+        for(int j=1; j<=column; j++){
+            if(j==i || j==1 || i==row){
+                printf("%d\t",j);
+            }
+            else{
+                printf(" \t");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+ques4.
+0	1	 	 	 	 	
+0	1	1	 	 	 	
+0	1	1	2	 	 	
+0	1	1	2	3	 	
+0	1	1	2	3	5
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int n;
+    printf("Enter a row");
+    scanf("%d",&n);
+    int sum=0;
+    for(int i=1;i<=n;i++){
+        int a=0;
+        int b=1;
+        for(int j=0;j<=n; j++){
+            if( j<=i){
+                printf("%d\t",a);
+                sum=a+b;
+                a=b;
+                b=sum;
+                
+            }
+            else{
+                printf(" \t");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+ques 5
+*	*	*	*	*	
+ 	*	*	*	*	
+ 	 	*	*	*	
+ 	 	 	*	*	
+ 	 	 	 	*
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int row, column;
+    printf("Enter a row and column");
+    scanf("%d %d",&row, &column);
+    
+    for(int i=1; i<=row; i++){
+        for(int j=1; j<=column; j++){
+            if(j>=i){
+                printf("*\t");
+            }
+            else{
+                printf(" \t");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+ques 6.
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int n;
+    printf("Enter a row");
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n; j++){
+            if( j>=i ){
+                printf("%d\t",j*i);
+            }
+            else{
+                printf(" \t");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+ques 7.
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int n;
+    printf("Enter a row");
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        int N=n-i+1;
+        for(int j=1;j<=n; j++){
+            if( j>=i ){
+                printf("%d\t",N--);
+            }
+            else{
+                printf(" \t");
+            }
+            
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+ques 8.
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int n;
+    printf("Enter a row");
+    scanf("%d",&n);
+     
+    for(int i=1;i<=n;i++){
+        //int N=n-i+1;
+        char ch='A';
+        for(int j=1;j<=n; j++){
+            if( j>=i ){
+                printf("%c\t",ch++);
+            }
+            else{
+                printf(" \t");
+            }
+            
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+ques 9
+ #include <stdio.h>
+
+int main() {
+    // Write C code here
+    int n;
+    printf("Enter a row");
+    scanf("%d",&n);
+    int a=0;
+    int b=1;
+    int sum=0;
+    for(int i=1;i<=n;i++){
+         
+        for(int j=0;j<=n; j++){
+            if( j>=i){
+                printf("%d\t",a);
+                sum=a+b;
+                a=b;
+                b=sum;
+                
+            }
+            else{
+                printf(" \t");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+ques 10
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int row, column;
+    printf("Enter a row and column");
+    scanf("%d %d",&row, &column);
+    
+    for(int i=1; i<=row; i++){
+        for(int j=1; j<=column; j++){
+            if(j<=i){
+                printf("%d\t",i);
+            }
+            else{
+                printf("%d\t",j);
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
